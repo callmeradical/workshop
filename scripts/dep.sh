@@ -22,7 +22,7 @@ curl -sSL https://get.rvm.io | bash -s stable
 
 usermod -a -G rvm vagrant
 
-source $HOME/.rvm/scripts/rvm
+source /etc/profile.d/rvm.sh
 
 rvm install ruby-2.2.0
 
