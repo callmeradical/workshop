@@ -15,6 +15,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 apt-get -y install docker-engine
 
 usermod -aG docker vagrant
+usermod -a -G rvm vagrant
 
 service docker start
 
