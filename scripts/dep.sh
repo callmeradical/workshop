@@ -12,13 +12,18 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sources.list.d/docker.list
 
-apt-get -y install docker-engine
+apt-get -y install docker-engine docker
 
 usermod -aG docker vagrant
-usermod -a -G rvm vagrant
 
 service docker start
 
 curl -sSL https://get.rvm.io | bash -s stable
+
+usermod -a -G rvm vagrant
+
+source $HOME/.rvm/scripts/rvm
+
+rvm install ruby-2.2.0
 
 # You can install anything you need here.
