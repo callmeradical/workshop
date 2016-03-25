@@ -12,7 +12,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sources.list.d/docker.list
 
-apt-get -y install docker-engine docker
+apt-get -y install docker-engine 
 
 usermod -aG docker vagrant
 
